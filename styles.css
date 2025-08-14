@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: hsl(0, 0%, 8%);
+    --user-container-background: hsl(0, 0%, 12%);
+    --list-items-background: hsl(0, 0%, 20%);
+    --text-clr: hsl(0, 0%, 100%);
+    --highlight-clr: hsl(75, 94%, 57%);
+    --defualt-font-family:'Inter', sans-serif;
+    --defualt-font-size: 14px;
+    --font-weight-s: 400;
+    --font-weight-m: 600;
+    --font-weight-l: 700;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--background-color);
+    font-size: var(--defualt-font-size);
+    font-family: var(--defualt-font-family);
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--user-container-background);
+    color: var(--text-clr);
+    padding: 15px 35px;
+    margin: 100px 0px 100px 0px;
+
+}
+
+.user-icon img {
+    width: 100px;       /* width of the image */
+    height: 100px;      /* height = width for perfect circle */
+    border-radius: 50%; /* makes it a circle */
+    object-fit: cover;  /* ensures image covers the area without distortion */
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-l);
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.user-location {
+    color: var(--highlight-clr);
+    font-weight: var(--font-weight-m);
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-tagline {
+    margin: 20px 0px 10px 0px;
+    padding: 0px;
+}
+
+.social-links-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.social-links-list li {
+    background-color: var(--list-items-background);
+    border-radius: 7px;
+    margin: 15px 0px;
+    padding: 12px 90px;
+    font-weight: var(--font-weight-m);
+    transition: 0.15s ease-in;
+}
+
+.social-links-list a {
+    text-decoration: none;
+    color: var(--text-clr);
+    font-weight: var(--font-weight-m);
+    transition: 0.15s ease-in;
+}
+
+.social-links-list a:visited {
+    color: var(--text-clr);
+}
+
+.social-links-list li:hover {
+background-color: var(--highlight-clr);
+cursor: pointer;
+}
+
+.social-links-list li:hover a{
+    color: var(--user-container-background);
+    cursor: pointer;
+}
+
+.social-links-list li:focus-within{
+    background-color: var(--highlight-clr);
+}
+
+.social-links-list li:focus-within a{
+color: var(--user-container-background);
+}
